@@ -33,9 +33,9 @@ export default function Home() {
       {/* =========================================
           2. HERO SECTION
       ========================================= */}
-      {/* Reduced padding top (pt-12 -> pt-6) for tighter mobile spacing relative to nav */}
-      <section className="w-full max-w-300 flex flex-col md:flex-row items-center justify-between px-6 md:px-10 pt-6 pb-20 md:pt-20 md:pb-24">
-        {/* Reduced space-y-12 -> space-y-8 on mobile for tighter text group */}
+      {/* Mobile: Tight (pt-6 pb-12) | Desktop: Airy (pt-24 pb-32) */}
+      <section className="w-full max-w-300 flex flex-col md:flex-row items-center justify-between px-6 md:px-10 pt-6 pb-12 md:pt-24 md:pb-32">
+        {/* Mobile: Tight (space-y-8) | Desktop: Airy (space-y-12) */}
         <div className="flex-[1.2] space-y-8 md:space-y-12">
           <div className="space-y-6">
             <motion.h1 
@@ -74,12 +74,12 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Hero Image - Reduced mt-16 -> mt-10 on mobile */}
+        {/* Hero Image */}
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="flex-1 flex justify-end mt-10 md:mt-0"
+          className="flex-1 flex justify-end mt-8 md:mt-0"
         >
           <img 
             src="/hero-mockup.webp" 
@@ -92,7 +92,8 @@ export default function Home() {
       {/* =========================================
           3. SPREAD SECTION (3 PHONES)
       ========================================= */}
-      <section className="w-full max-w-300 py-24 px-6 md:px-10 flex flex-col items-center text-center space-y-12">
+      {/* Mobile: Tight (py-12) | Desktop: Airy (py-32) */}
+      <section className="w-full max-w-300 py-12 md:py-32 px-6 md:px-10 flex flex-col items-center text-center space-y-8 md:space-y-12">
         <div className="space-y-6">
           <h2 className="text-[36px] md:text-[54px] font-serif font-black tracking-tight max-w-172.5 text-brand-dark leading-[1.1] mx-auto">
             Take <span className="text-brand-blue">good care</span> of your money
@@ -102,7 +103,7 @@ export default function Home() {
           </p>
         </div>
         
-        {/* Reduced mt-16 -> mt-8 on mobile for closer image grouping */}
+        {/* Mobile: Tight margin (mt-8) | Desktop: Original margin (mt-16) */}
         <div className="w-full mt-8 md:mt-16 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-12">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
@@ -114,7 +115,7 @@ export default function Home() {
             <img 
               src="/phone-left.webp" 
               alt="Screen 1" 
-              className="w-full h-auto drop-shadow-2xl rounded-[32px]" // Added rounded-xl (12px)
+              className="w-full h-auto drop-shadow-2xl rounded-xl" 
             />
           </motion.div>
 
@@ -128,7 +129,7 @@ export default function Home() {
             <img 
               src="/phone-center.webp" 
               alt="Screen 2" 
-              className="w-full h-auto drop-shadow-2xl relative z-10 rounded-[32px]" // Added rounded-xl (12px)
+              className="w-full h-auto drop-shadow-2xl relative z-10 rounded-xl" 
             />
           </motion.div>
 
@@ -142,7 +143,7 @@ export default function Home() {
             <img 
               src="/phone-right.webp" 
               alt="Screen 3" 
-              className="w-full h-auto drop-shadow-2xl rounded-[32px]" // Added rounded-xl (12px)
+              className="w-full h-auto drop-shadow-2xl rounded-xl" 
             />
           </motion.div>
         </div>
@@ -151,7 +152,8 @@ export default function Home() {
       {/* =========================================
           4. FEATURE: ESCROBOND
       ========================================= */}
-      <section className="w-full max-w-300 py-24 px-6 md:px-10 flex flex-col items-center text-center space-y-12">
+      {/* Mobile: Tight (py-12) | Desktop: Airy (py-32) */}
+      <section className="w-full max-w-300 py-12 md:py-32 px-6 md:px-10 flex flex-col items-center text-center space-y-8 md:space-y-12">
         <div className="space-y-6">
           <h2 className="text-[36px] md:text-[54px] font-serif font-black tracking-tight max-w-172.5 text-brand-dark leading-[1.1] mx-auto">
             Trade securely with <span className="text-brand-blue">EscroBond</span>
@@ -166,7 +168,7 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full mt-10 max-w-6xl"
+          className="w-full mt-8 md:mt-10 max-w-6xl"
         >
           <img src="/escrobond-mobile.webp" alt="EscroBond Mobile" className="md:hidden w-full h-auto rounded-[32px] shadow-sm" />
           <img src="/escrobond.webp" alt="EscroBond Desktop" className="hidden md:block w-full h-auto rounded-[32px] shadow-sm" />
@@ -176,7 +178,8 @@ export default function Home() {
       {/* =========================================
           5. FEATURE: COMPARE
       ========================================= */}
-      <section className="w-full max-w-300 py-24 px-6 md:px-10 flex flex-col items-center text-center space-y-12">
+      {/* Mobile: Tight (py-12) | Desktop: Airy (py-32) */}
+      <section className="w-full max-w-300 py-12 md:py-32 px-6 md:px-10 flex flex-col items-center text-center space-y-8 md:space-y-12">
         <div className="space-y-6">
           <h2 className="text-[36px] md:text-[54px] font-serif font-black tracking-tight max-w-172.5 text-brand-dark leading-[1.1] mx-auto">
             <span className="text-brand-blue">Compare</span> across stores
@@ -191,7 +194,7 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full mt-10 max-w-6xl"
+          className="w-full mt-8 md:mt-10 max-w-6xl"
         >
           <img src="/feature-compare-mobile.webp" alt="Compare Mobile" className="md:hidden w-full h-auto rounded-[32px] shadow-sm" />
           <img src="/feature-compare.webp" alt="Compare Desktop" className="hidden md:block w-full h-auto rounded-[32px] shadow-sm" />
@@ -201,7 +204,8 @@ export default function Home() {
       {/* =========================================
           6. SECURE CHAT
       ========================================= */}
-      <section className="w-full max-w-300 py-24 px-6 md:px-10 flex flex-col items-center text-center space-y-12">
+      {/* Mobile: Tight (py-12) | Desktop: Airy (py-32) */}
+      <section className="w-full max-w-300 py-12 md:py-32 px-6 md:px-10 flex flex-col items-center text-center space-y-8 md:space-y-12">
         <div className="space-y-6">
           <h2 className="text-[36px] md:text-[54px] font-serif font-black tracking-tight max-w-172.5 text-brand-dark leading-[1.1] mx-auto">
             Chat privately with <span className="text-brand-blue">Encryption</span>
@@ -216,7 +220,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full mt-10 max-w-6xl"
+          className="w-full mt-8 md:mt-10 max-w-6xl"
         >
           <img src="/chat-mobile.webp" alt="Chat Mobile" className="md:hidden w-full h-auto rounded-[32px] shadow-sm" />
           <img src="/chat.webp" alt="Chat Desktop" className="hidden md:block w-full h-auto rounded-[32px] shadow-sm" />
@@ -226,19 +230,21 @@ export default function Home() {
       {/* =========================================
           7. QUOTE SECTION
       ========================================= */}
-      <section className="w-full max-w-300 py-20 px-6 md:px-10 flex justify-center">
+      {/* Mobile: Tight (py-12) | Desktop: Airy (py-40) */}
+      <section className="w-full max-w-300 py-12 md:py-40 px-6 md:px-10 flex justify-center">
          <div className="max-w-4xl text-center">
             <h3 className="text-[32px] md:text-[60px] font-serif font-bold text-brand-dark leading-tight">
               "A fair price may be a little thing, but it can make <span className="text-brand-blue">a big difference</span> to your wallet."
             </h3>
-            <p className="mt-8 text-gray-400 font-sans font-medium">— The FairTrade Promise</p>
+            <p className="mt-6 md:mt-8 text-gray-400 font-sans font-medium">— The FairTrade Promise</p>
          </div>
       </section>
 
       {/* =========================================
           8. CORE VALUES (BUY, SELL, ENJOY)
       ========================================= */}
-      <section className="w-full max-w-300 pb-24 px-6 md:px-10 flex flex-col items-center">
+      {/* Mobile: Tight (pb-16) | Desktop: Airy (pb-32) */}
+      <section className="w-full max-w-300 pb-16 md:pb-32 px-6 md:px-10 flex flex-col items-center">
          <div className="w-full flex flex-col md:flex-row gap-8 md:gap-8 items-center justify-center text-center">
             
             {/* BUY */}
@@ -286,7 +292,8 @@ export default function Home() {
       <footer className="w-full flex flex-col border-t border-gray-100">
          
          {/* Top Part */}
-         <div className="w-full max-w-300 mx-auto px-6 md:px-10 py-10 md:py-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
+         {/* Mobile: Tight (py-10) | Desktop: Airy (py-20) */}
+         <div className="w-full max-w-300 mx-auto px-6 md:px-10 py-10 md:py-20 flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
             
             {/* Left: Brand & Tagline */}
             <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
