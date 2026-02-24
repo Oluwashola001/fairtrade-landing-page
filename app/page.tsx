@@ -157,7 +157,7 @@ export default function Home() {
         </Reveal>
 
         <Reveal y={40} scale={0.97} className="w-full mt-10 max-w-6xl">
-          <img src="/escrobond-mobile.png" alt="EscroBond Mobile" className="md:hidden w-full h-auto rounded-4xl shadow-sm" />
+          <img src="/escrobond-mobile.webp" alt="EscroBond Mobile" className="md:hidden w-full h-auto rounded-4xl shadow-sm" />
           <img src="/escrobond.webp" alt="EscroBond Desktop" className="hidden md:block w-full h-auto rounded-4xl shadow-sm" />
         </Reveal>
       </section>
